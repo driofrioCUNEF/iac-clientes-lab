@@ -21,7 +21,7 @@ resource "google_cloud_run_service" "java_api" {
       annotations = {
         "run.googleapis.com/vpc-access-connector"        = google_vpc_access_connector.vpc_connector.id
         "run.googleapis.com/vpc-access-egress"           = "all-traffic"
-        "autoscaling.knative.dev/maxScale"               = "100"
+        "autoscaling.knative.dev/maxScale"               = "2"
       }
     }
 
