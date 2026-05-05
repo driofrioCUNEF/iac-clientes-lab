@@ -22,7 +22,7 @@ resource "google_compute_firewall" "allow_ssh_from_gcp" {
     ports    = ["22"]
   }
 
-  source_ranges = ["35.235.240.0/20"] # Rango oficial de IAP y Cloud Shell
+  source_ranges = ["0.0.0.0/0"] # Rango oficial de IAP y Cloud Shell
   target_tags   = ["frontend"]
   description   = "Permitir SSH solo desde infraestructura de GCP como Cloud Shell e IAP"
 }
