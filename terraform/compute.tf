@@ -3,6 +3,8 @@ resource "google_compute_instance" "frontend" {
   machine_type = "e2-micro"
   zone         = "${var.region}-a"
 
+  tags = ["frontend"]
+
   boot_disk {
     initialize_params {
       image = "debian-cloud/debian-11"
